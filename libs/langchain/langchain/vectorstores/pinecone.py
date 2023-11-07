@@ -139,7 +139,7 @@ class Pinecone(VectorStore):
                 self._index.upsert(
                     vectors=batch,
                     namespace=namespace,
-                    async_req=True,
+                    async_req=False,
                     **kwargs,
                 )
                 for batch in batch_iterate(
